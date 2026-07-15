@@ -1,6 +1,7 @@
 //your code here
-// Clear body to prevent duplicate elements from previous runs
+// Clear the body to ensure no duplicate elements from previous runs
 document.body.innerHTML = '';
+
 const body = document.querySelector('body');
 
 // 1. Header
@@ -8,10 +9,10 @@ const header = document.createElement('header');
 header.innerHTML = '<h1>The Shawshank Redemption</h1>';
 body.appendChild(header);
 
-// 2. Navigation (with text and required IDs)
+// 2. Navigation (Must contain text and links with specific IDs)
 const nav = document.createElement('nav');
 nav.innerHTML = `
-    <p>Navigate to:</p>
+    <p>Jump to section:</p>
     <a href="#actor" id="nav-actor">Actors</a> | 
     <a href="#quote" id="nav-quote">Quotes</a>
 `;
@@ -21,7 +22,7 @@ body.appendChild(nav);
 const summary = document.createElement('section');
 summary.innerHTML = `
     <h2>Plot Summary</h2>
-    <p>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. Andy Dufresne, a banker wrongly convicted of murder, slowly earns the respect of his fellow inmates and the warden while secretly plotting his escape over two decades.</p>
+    <p>Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency. Andy Dufresne, a banker wrongly convicted of murder, slowly earns the respect of his fellow inmates while secretly plotting his escape.</p>
 `;
 body.appendChild(summary);
 
@@ -30,7 +31,7 @@ const actorSection = document.createElement('section');
 actorSection.id = 'actor';
 actorSection.innerHTML = `
     <h2>Actors</h2>
-    <p>The film stars <b>Tim Robbins</b> as Andy Dufresne and <b>Morgan Freeman</b> as Ellis "Red" Redding. Their powerful performances drive the emotional core of the story.</p>
+    <p>The film stars <b>Tim Robbins</b> as Andy Dufresne and <b>Morgan Freeman</b> as Ellis "Red" Redding.</p>
 `;
 body.appendChild(actorSection);
 
