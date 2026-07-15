@@ -1,56 +1,5 @@
 <!DOCTYPE html>
-// Clear body to prevent duplicate errors
-document.body.innerHTML = '';
-const body = document.querySelector('body');
 
-// 1. Header
-const header = document.createElement('header');
-header.innerText = 'The Shawshank Redemption';
-body.appendChild(header);
-
-// 2. Navigation (FIXED: Exactly 2 children, no extra text nodes)
-const nav = document.createElement('nav');
-
-const linkActor = document.createElement('a');
-linkActor.href = '#actor';
-linkActor.id = 'nav-actor';
-linkActor.innerText = 'Actors';
-
-const linkQuote = document.createElement('a');
-linkQuote.href = '#quote';
-linkQuote.id = 'nav-quote';
-linkQuote.innerText = 'Quotes';
-
-nav.appendChild(linkActor);
-nav.appendChild(linkQuote);
-body.appendChild(nav);
-
-// 3. Summary (FIXED: Use <summary> tag, not <section>)
-const summaryTag = document.createElement('summary');
-summaryTag.innerHTML = '<h2>Plot Summary</h2><p>Two imprisoned men bond over years, finding redemption through acts of decency. Andy Dufresne, wrongly convicted, earns respect while secretly plotting his escape.</p>';
-body.appendChild(summaryTag);
-
-// 4. Actor Section
-const actorSection = document.createElement('section');
-actorSection.id = 'actor';
-actorSection.innerHTML = '<h2>Actors</h2><p>Stars Tim Robbins as Andy and Morgan Freeman as Red.</p>';
-body.appendChild(actorSection);
-
-// 5. Quote Section
-const quoteSection = document.createElement('section');
-quoteSection.id = 'quote';
-quoteSection.innerHTML = '<h2>Favorite Quote</h2><p>"Hope is a good thing, maybe the best of things." - Andy Dufresne</p>';
-body.appendChild(quoteSection);
-
-// 6. Aside
-const aside = document.createElement('aside');
-aside.innerHTML = '<h3>Details</h3><p>IMDb: 9.3/10</p><p>Released: 1994</p>';
-body.appendChild(aside);
-
-// 7. Footer
-const footer = document.createElement('footer');
-footer.innerText = 'Produced by: Niki Marvin';
-body.appendChild(footer);   
 <html>
 
 <head>
